@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advanced Essential</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background-color: green;
+            color: rgb(216, 211, 211);
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+       
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+       
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+    }
+    
+
+        .dropdown:hover .dropdown-button {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="Your name.." required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Your last name.." required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" required>
+                    <option value="Australia">Australia</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+<br><br>
+<div class="dropdown">
+    <button class="dropdown-button">Dropdown</button>
+    <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div><br><br>
+    
+
+    <p>this is a dropdown menu </p>
+   
+
+</body>
+</html>
